@@ -2,7 +2,7 @@
 
 select
 	customer.customer_id,
-	customer.first_name || customer.last_name as customer_fullname,
+	customer.first_name || ' ' || customer.last_name as customer_fullname,
 	customer.email as email_of_customer,
 	address.address as address_of_customer,
 	customer.activebool as active_bool,

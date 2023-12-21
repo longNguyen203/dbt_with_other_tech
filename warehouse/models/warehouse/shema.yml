@@ -1,0 +1,189 @@
+version: 2
+
+models:
+  - name: dim_actor_infor_detail
+    description: "Information detail for actor"
+    columns:
+      - name: actor_id
+        description: " "
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: " "
+        tests: 
+          - not_null
+      - name: last_name
+        description: " "
+        tests: 
+          - not_null
+      - name: full_name
+        description: " "
+        tests: 
+          - not_null
+
+  - name: dim_customer_infor_detail
+    description: "Information detail for customer"
+    columns:
+      - name: customer_id
+        description: " "
+        tests:
+          - unique
+          - not_null
+      - name: customer_fullname
+        description: " "
+        tests:
+          - not_null
+      - name: email_of_customer
+        description: " "
+        tests:
+          - not_null
+      - name: address_of_customer
+        description: " "
+        tests:
+          - not_null
+      - name: active_bool
+        description: " "
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+      - name: active_number
+        description: " "
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 0]
+      - name: create_date
+        description: " "
+        tests:
+          - not_null
+      - name: phone_of_customer
+        description: " "
+        tests:
+          - not_null
+      - name: address_of_customer2
+        description: " "
+        tests:
+          - not_null
+      - name: district
+        description: " "
+        tests:
+          - not_null
+      - name: postal_code
+        description: " "
+        tests:
+          - unique
+          - not_null
+      - name: city_customer
+        description: " " 
+        tests:
+          - not_null
+      - name: country_customer
+        description: " "
+        tests:
+          - not_null
+  - name: dim_employee_infor_detail
+    description: "Information detail for employee"
+    columns:
+      - name: staff_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: store_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: last_name
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: staff_fullname
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: email_of_employee
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: active_bool
+        description: ""
+        tests:
+          - not_null
+      - name: username
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: password
+        description: ""
+        tests:
+          - unique
+          - not_null
+        
+  - name: dim_film_infor_detail
+    description: "information detail for film"
+    columns:
+      - name: film_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: title_film
+        description: ""
+        tests:
+          - not_null
+      - name: description
+        description: ""
+        tests:
+          - not_null
+      - name: release_year
+        description: ""
+        tests:
+          - not_null
+      - name: category_film
+        description: ""
+        tests:
+          - not_null
+      - name: langth_film
+        description: ""
+        tests:
+          - not_null
+      - name: rating_film
+        description: ""
+        tests:
+          - not_null
+      - name: rental_duration_film
+        description: ""
+        tests:
+          - not_null
+      - name: rental_rate_film
+        description: ""
+        tests:
+          - not_null
+      - name: replacement_cost_film
+        description: ""
+        tests:
+          - not_null
+      - name: subtitles
+        description: ""
+        tests:
+          - not_null
+      - name: special_features_film
+        description: ""
+        tests:
+          - not_null
+      - name: fulltext_film
+        description: ""
+        tests:
+          - not_null
