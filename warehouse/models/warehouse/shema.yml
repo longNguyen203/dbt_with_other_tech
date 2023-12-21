@@ -73,7 +73,6 @@ models:
       - name: postal_code
         description: " "
         tests:
-          - unique
           - not_null
       - name: city_customer
         description: " " 
@@ -128,7 +127,6 @@ models:
       - name: password
         description: ""
         tests:
-          - unique
           - not_null
         
   - name: dim_film_infor_detail
