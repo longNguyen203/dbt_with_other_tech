@@ -3,7 +3,7 @@ import os
 from dagster import Definitions
 from dagster_dbt import DbtCliResource
 
-from .assets import warehouse_dbt_assets
+from .dbt import warehouse_dbt_assets
 from .constants import dbt_project_dir
 from .schedules import schedules
 
